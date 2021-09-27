@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imersão Dev Alura - Aula 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">
+        Calculadora de média</h1>
+        <p class="page-subtitle">
+        Descubra qual a sua média de nota de todas as provas!
+        </p>
+        <p id="grade-result"></p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+      </div>
+      <a href="https://alura.com.br/" target="_blank">
+      <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+      </a>
+      <script>
+        const grades = document.getElementById('grade-result');
+        const h1 = document.querySelectorAll('h1');
+        
+        h1[0].style.color = "rgb(120, 180, 225)";
+
+        let notaDoPrimeiroBimestre = 0.54;
+        let notaDoSegundoBimestre = 6.31;
+        let notaDoTerceiroBimestre = 7.10;
+        let notaDoQuartoBimestre = 8.96;
+        let notaFinal = 
+            ((notaDoPrimeiroBimestre + notaDoSegundoBimestre + 
+            notaDoTerceiroBimestre + notaDoQuartoBimestre) / 4).toFixed(1);
+        if (notaFinal >= 6) {
+            grades.textContent = `Aprovado com a nota ${notaFinal}!`;
+        } else {
+            grades.textContent = `Reprovado com a nota ${notaFinal}!`;
+        }
+      </script>
+</body>
+</html>
